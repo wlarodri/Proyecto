@@ -17,6 +17,8 @@ EventQueue.invokeLater(new Runnable() {
 public void run() {
 try {
 JFrameConFondo frame = new JFrameConFondo();
+frame.setSize(1300,700); 
+frame.setResizable(false);
 frame.setVisible(true);
 } catch (Exception e) {
 e.printStackTrace();
@@ -31,20 +33,22 @@ public JFrameConFondo() {
 setTitle("Mi Primer Juego"); 
 
 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-setBounds(100, 100, 1000, 600);
+
+setBounds(45, 10, 0, 00);
 PanelImagen p = new PanelImagen();
 p.setBorder(new EmptyBorder(0, 0, 0, 0));
 p.setLayout(new BorderLayout(50, 50));
 
+
 p.setLayout(null);
 JButton boton = new JButton("TUTORIAL");
-boton.setBounds(300,230,120,32);
+boton.setBounds(430,250,140,35);
 p.add(boton);
 JButton boton2 = new JButton("JUGAR");
-boton2.setBounds(560,230,120,32);
+boton2.setBounds(750,250,140,35);
 p.add(boton2);
 JButton boton3 = new JButton("SALIR");
-boton3.setBounds(430,270,120,32);
+boton3.setBounds(590,310,140,35);
 p.add(boton3);
 
 //Codigo accion Botones
@@ -60,7 +64,7 @@ public void actionPerformed(ActionEvent ae){
 });
 boton3.addActionListener(new ActionListener(){
 public void actionPerformed(ActionEvent ae){
- JOptionPane.showMessageDialog(null, "                Saliendo",null,JOptionPane.WARNING_MESSAGE);
+ //JOptionPane.showMessageDialog(null, "                Saliendo",null,JOptionPane.WARNING_MESSAGE);
  
  System.exit(0);
 }
@@ -68,5 +72,12 @@ public void actionPerformed(ActionEvent ae){
 
 setContentPane(p);
 p.setSize(500,300);
+}
+
+
+
+private static void setText(String string) {
+	// TODO Auto-generated method stub
+	
 }
 }
